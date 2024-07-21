@@ -8,13 +8,14 @@ import {
     invalidIdResponse,
     checkIfEmailIsValid,
     checkIfPasswordIsValid,
+    checkIfIdIsValid,
 } from './helpers/user.js';
 
 export class UpdateUserController {
     async execute(httpRequest) {
         try {
             const userId = httpRequest.params.userId;
-            const isIdValid = validator.isUUID(userId);
+            const isIdValid = checkIfIdIsValid(userId);
 
             if (!isIdValid) {
                 return invalidIdResponse();
