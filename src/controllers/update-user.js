@@ -1,5 +1,3 @@
-import validator from 'validator';
-import { badRequest, ok, serverError } from './helpers/http.js';
 import { UpdateUserUseCase } from '../use-cases/update-user.js';
 import { EmailAlreadyInUseError } from '../errors/user.js';
 import {
@@ -9,7 +7,10 @@ import {
     checkIfEmailIsValid,
     checkIfPasswordIsValid,
     checkIfIdIsValid,
-} from './helpers/user.js';
+    badRequest,
+    ok,
+    serverError,
+} from './helpers/index.js';
 
 export class UpdateUserController {
     async execute(httpRequest) {
@@ -41,9 +42,7 @@ export class UpdateUserController {
             }
 
             if (params.password) {
-                const passwordIsValid = checkIfPasswordIsValid(
-                    params.password
-                );
+                const passwordIsValid = checkIfPasswordIsValid(params.password);
 
                 if (!passwordIsValid) {
                     return invalidPasswordResponse();
@@ -51,9 +50,7 @@ export class UpdateUserController {
             }
 
             if (params.email) {
-                const emailIsValid = checkIfEmailIsValid(
-                    params.email
-                );
+                const emailIsValid = checkIfEmailIsValid(params.email);
 
                 if (!emailIsValid) {
                     return emailIsAlreadyInUseResponse();
@@ -62,10 +59,7 @@ export class UpdateUserController {
 
             const updateUserUseCase = new UpdateUserUseCase();
 
-            const updatedUser = await updateUserUseCase.execute(
-                userId,
-                params
-            );
+            const updatedUser = await updateUserUseCase.execute(userId, params);
 
             return ok(updatedUser);
         } catch (error) {
