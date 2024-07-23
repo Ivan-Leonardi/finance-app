@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
-    <diagram id="wibsMWzVle5SGEz2CT0J" name="Page-1">
-        <mxGraphModel dx="797" dy="1605" grid="1" gridSize="9" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <diagram id="wibsMWzVle5SGEz2CT0J" name="Rotas user">
+        <mxGraphModel dx="836" dy="1736" grid="1" gridSize="9" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -288,14 +288,73 @@
                 <mxCell id="118" value="Validar se campos não permitidos foram passados" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="300" y="180" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="123" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="120" target="122">
+                <mxCell id="123" value="" style="edgeStyle=none;html=1;" parent="1" source="120" target="122" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="120" value="Se a senha for atualizada, validar seu tamanho" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="300" y="320" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="122" value="Se o email for atualizado, validar seu formato" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="122" value="Se o email for atualizado, validar seu formato" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="300" y="460" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="UE_ahoGkhQtwFXPtf4iw" name="Rotas transaction">
+        <mxGraphModel dx="836" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-3" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-1" target="LYbfpXAifzQYKBJQRHxv-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-1" value="POST&lt;br&gt;/ transaction&lt;br&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="140" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-5" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-2" target="LYbfpXAifzQYKBJQRHxv-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-11" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-2" target="LYbfpXAifzQYKBJQRHxv-10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-2" value="Create Transaction Controller" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-7" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-4" target="LYbfpXAifzQYKBJQRHxv-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-17" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-4" target="LYbfpXAifzQYKBJQRHxv-16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-4" value="Create Transaction Use Case" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-9" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-6" target="LYbfpXAifzQYKBJQRHxv-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-6" value="Postgres Create Transaction Repository" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-8" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#2E27AD;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rds_postgresql_instance;" vertex="1" parent="1">
+                    <mxGeometry x="701" y="290" width="78" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-13" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-10" target="LYbfpXAifzQYKBJQRHxv-12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-10" value="Validar se o ID do usuário é válido" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-15" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="LYbfpXAifzQYKBJQRHxv-12" target="LYbfpXAifzQYKBJQRHxv-14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-12" value="Validar se o amount é maior do que 0 e se tem 2 casas decimais" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-14" value="Validar se o type é válido" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="570" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="LYbfpXAifzQYKBJQRHxv-16" value="Validar se o usuário recebido existe" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="290" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

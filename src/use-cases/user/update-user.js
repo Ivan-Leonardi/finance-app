@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { EmailAlreadyInUseError } from '../errors/user.js';
+import { EmailAlreadyInUseError } from '../../errors/user.js';
 export class UpdateUserUseCase {
     constructor(getUserByEmailRepository, updateUserRepository) {
         this.getUserByEmailRepository = getUserByEmailRepository;
@@ -8,7 +8,6 @@ export class UpdateUserUseCase {
     async execute(userId, updateUserParams) {
         //1. se o email estiver sendo atualizado, verificar se ele já está em uso por outro usuário.
         if (updateUserParams.email) {
-     
             const userWithProvidedEmail =
                 await this.getUserByEmailRepository.execute(
                     updateUserParams.email
