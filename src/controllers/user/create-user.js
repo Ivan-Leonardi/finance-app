@@ -1,5 +1,13 @@
-import { EmailAlreadyInUseError } from '../errors/user.js';
-import { checkIfEmailIsValid, checkIfPasswordIsValid, emailIsAlreadyInUseResponse, invalidPasswordResponse, badRequest, created, serverError } from './helpers/index.js';
+import { EmailAlreadyInUseError } from '../../errors/user.js';
+import {
+    checkIfEmailIsValid,
+    checkIfPasswordIsValid,
+    emailIsAlreadyInUseResponse,
+    invalidPasswordResponse,
+    badRequest,
+    created,
+    serverError,
+} from '../helpers/index.js';
 export class CreateUserController {
     constructor(createUserUseCase) {
         this.createUserUseCase = createUserUseCase;
@@ -35,7 +43,7 @@ export class CreateUserController {
             }
 
             //chamar o use case
-           
+
             const createduser = await this.createUserUseCase.execute(params);
 
             //retornar a resposta para o usuario (status code)
