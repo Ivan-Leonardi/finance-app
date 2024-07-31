@@ -7,6 +7,7 @@ import {
     badRequest,
     created,
     serverError,
+    validateRequiredFields,
 } from '../helpers/index.js';
 export class CreateUserController {
     constructor(createUserUseCase) {
@@ -23,6 +24,15 @@ export class CreateUserController {
                 'email',
                 'password',
             ];
+
+            const { ok: RequiredFieldsWereProvided, missingField } =
+                validateRequiredFields(params, requireFields);
+
+            if (!RequiredFieldsWereProvided) {
+                return badRequest({
+                    message: `The field ${missingField} is required.`,
+                });
+            }
 
             for (const field of requireFields) {
                 if (!params[field] || params[field].trim().length === 0) {
